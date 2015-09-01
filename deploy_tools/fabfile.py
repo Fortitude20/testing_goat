@@ -7,7 +7,7 @@ REPO_URL = 'https://github.com/Fortitude20/testing_goat.git'
 env.hosts_list = ['book-example-staging.wisermob.com', 'book-example.wisermob.com']
 staging_serv = env.hosts_list[0]
 production_serv = env.hosts_list[1]
-selected_server = production_serv
+selected_server = staging_serv
 env.user = 'ubuntu'
 # if host comment out, fabric will run all hosts
 env.host_string= env.user + "@" + selected_server
