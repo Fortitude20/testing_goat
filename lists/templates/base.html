@@ -32,7 +32,7 @@
                     {% csrf_token %}
                     {% if form.errors %}
                         <div class="form-group has-error">
-                            <span class="help-block">{{ form.text.errors }}</span>
+                            <div class="help-block">{{ form.text.errors }}</div>
                         </div>
                     {% endif %}
                 </form>
@@ -50,9 +50,8 @@
 </div>
 <script src="http://code.jquery.com/jquery.min.js"></script>
 <script src="https://login.persona.org/include.js"></script>
-<script src="/static/accounts/accounts.js"></script>
+<script src="/static/accounts.js"></script>
 <script src="/static/list.js"></script>
-
 <script>
     /*global $, Superlists, navigator */
     $(document).ready(function () {
@@ -60,7 +59,7 @@
         var token = "{{ csrf_token }}";
         var urls = {
             login: "{% url 'persona_login' %}",
-            logout: "TODO",
+            logout: "{% url 'logout' %}",
         };
         Superlists.Accounts.initialize(navigator, user, token, urls);
     });
