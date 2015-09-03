@@ -4,6 +4,7 @@ import random
 
 env.key_filename = '/home/tim/Downloads/tdd_django.pem'
 REPO_URL = 'https://github.com/Fortitude20/testing_goat.git'
+env.user= 'ubuntu'
 
 def deploy():
     site_folder = '/home/%s/sites/%s' % (env.user, env.host)

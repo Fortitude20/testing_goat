@@ -1,5 +1,6 @@
 from fabric.api import env, run
-
+env.key_filename = '/home/tim/Downloads/tdd_django.pem'
+env.user= 'ubuntu'
 
 def _get_base_folder(host):
     return '~/sites/' + host
